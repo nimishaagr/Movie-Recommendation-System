@@ -3,7 +3,7 @@ title: "Movie Recommendation System"
 subtitle: "Predicting Movie Ratings"
 author: "Nimisha Agrawal"
 date: "January 1, 2021"
-abstract: This project seeks to implement two movie recommendation systems to predict the rating of a movie by a user. The first model uses a handcrafted hybrid method that models user-movie interactions and movies' attributes. The second model uses a collaborative filtering method via matrix factorization as done by the recosystem package. The report starts with an introduction to the basics of recommender systems. Next is a description of the data set followed by the menthodology and the procedure for data wrangling and pre-processing. Some exploratory data analysis has been done to understand the dataset and draw helpful insights. Then the evolution of our machine learning models has been described in detail. Finally, the results (including RMSE values) and the conclusion is presented, with a future outlook. 
+abstract: This project seeks to implement two movie recommendation systems to predict the rating of a movie by a user. The first model uses a handcrafted hybrid method that models user-movie interactions and movies' attributes. The second model uses a collaborative filtering method via matrix factorization as done by the recosystem package. The report starts with an introduction to the basics of recommender systems. Next is a description of the data set followed by the menthodology and the procedure for data wrangling and pre-processing. Some exploratory data analysis has been done to understand the dataset and draw helpful insights. Then the evolution of our machine learning models has been described in detail. Finally, the results (including RMSE values) and the conclusion is presented, with a future outlook. The target is to achieve an RMSE value less than 0.86490. 
 output: 
   pdf_document:
     toc: true
@@ -76,7 +76,7 @@ In this project, the [Movie Lens 10M Dataset](https://grouplens.org/datasets/mov
 \newpage
 # Methodology
 
-I use R^[R is free and open source. You can download it here: https://cran.r-project.org/] with the RStudio IDE^[RStudio has many useful features apart from the editor. You can download it here: https://rstudio.com/products/rstudio/download/] to perform data wrangling, pre-processing, exploratory analysis and machine learning. This report is generated using [R Markdown with RStudio](https://rmarkdown.rstudio.com/), in a [Tufte Handout](https://rstudio.github.io/tufte/) format.  
+I use R^[R is free and open source. You can download it here: https://cran.r-project.org/] with the RStudio IDE^[RStudio has many useful features apart from the editor. You can download it here: https://rstudio.com/products/rstudio/download/] to perform data wrangling, pre-processing, exploratory analysis and machine learning. This report is generated using [R Markdown with RStudio](https://rmarkdown.rstudio.com/).  
 To implement the project, the following packages are used in addition to base R:    
 
 ```{r loading-packages, results='hide'}
@@ -1448,6 +1448,6 @@ rmse_results %>%
 \newpage
 # Conclusion and Future Outlook
 
-In this project, the *movielens* data set was explored in detail, with an extra fun genre analysis. To predict movie ratings for a user and movie, two different algorithms have been constructed with the lowest reported RMSE being `r rmse_reco`. For the first model, a step-by-step development process was shown. The second model involved an advanced method, so I stuck to the defaults. These models have aided a relatively successful movie recommendation system.   
+The required RMSE of <0.86490 was acheived successfully. In this project, the *movielens* data set was explored in detail, with an extra fun genre analysis. To predict movie ratings for a user and movie, two different algorithms have been constructed with the lowest reported RMSE being `r rmse_reco`. For the first model, a step-by-step development process was shown. The second model involved an advanced method, so I stuck to the defaults. These models have aided a relatively successful movie recommendation system.   
 
 That said, with machine learning, the more the merrier. More data, more models and more tuning will unquestionably better the system. It must be noted that the computational time was quite large, and the processor RAM requirements are high. Optimization can be considered in the future.
